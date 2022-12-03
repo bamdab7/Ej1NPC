@@ -19,6 +19,9 @@ class JugadoresSQLiteHelper (
     }
 
     override fun onUpgrade(db: SQLiteDatabase?, p1: Int, p2: Int) {
-        TODO("Not yet implemented")
+        //Eliminamos la tabla anterior y la actualizamos
+        db?.execSQL("DROP TABLE IF EXISTS Jugadores")
+        //Se crea nueva version de la tabla
+        db?.execSQL(sqlCreate)
     }
 }

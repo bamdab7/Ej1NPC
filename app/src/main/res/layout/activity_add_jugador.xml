@@ -17,123 +17,23 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/spinnerPosicion"
-        android:layout_width="210dp"
-        android:layout_height="23dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="260dp"
-        android:entries="@array/posicion"
-        app:layout_constraintStart_toEndOf="@+id/textCodigo4"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textNombre"
-        android:layout_width="117dp"
-        android:layout_height="22dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="160dp"
-        android:text="Nombre"
-        app:layout_constraintEnd_toStartOf="@+id/txtCodigo"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <EditText
-        android:id="@+id/txtCodigo"
-        android:layout_width="211dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="104dp"
-        android:layout_marginEnd="68dp"
+        android:id="@+id/txtPrecio"
+        android:layout_width="218dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="216dp"
+        android:layout_marginEnd="56dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnAceptar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="76dp"
-        android:layout_marginBottom="296dp"
-        android:text="Aceptar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/textPuntos"
-        android:layout_width="117dp"
-        android:layout_height="22dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="312dp"
-        android:text="Puntos"
-        app:layout_constraintEnd_toStartOf="@+id/txtCodigo"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/txtPuntos"
-        android:layout_width="211dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="312dp"
-        android:layout_marginEnd="68dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btnCancelar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="92dp"
-        android:layout_marginBottom="296dp"
-        android:text="Cancelar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
 
     <EditText
         android:id="@+id/txtNombre"
-        android:layout_width="211dp"
-        android:layout_height="22dp"
+        android:layout_width="222dp"
+        android:layout_height="38dp"
         android:layout_marginTop="160dp"
-        android:layout_marginEnd="68dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textCodigo4"
-        android:layout_width="117dp"
-        android:layout_height="22dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="260dp"
-        android:text="Posicion"
-        app:layout_constraintEnd_toStartOf="@+id/txtCodigo"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textCodigo"
-        android:layout_width="117dp"
-        android:layout_height="22dp"
-        android:layout_marginStart="14dp"
-        android:layout_marginTop="104dp"
-        android:text="Codigo"
-        app:layout_constraintEnd_toStartOf="@+id/txtCodigo"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/txtPrecio"
-        android:layout_width="211dp"
-        android:layout_height="22dp"
-        android:layout_marginTop="212dp"
-        android:layout_marginEnd="68dp"
+        android:layout_marginEnd="52dp"
         android:ems="10"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
@@ -144,11 +44,111 @@
         android:layout_width="117dp"
         android:layout_height="22dp"
         android:layout_marginStart="14dp"
-        android:layout_marginTop="212dp"
+        android:layout_marginTop="228dp"
         android:text="Precio"
         app:layout_constraintEnd_toStartOf="@+id/txtCodigo"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtPuntos"
+        android:layout_width="227dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="316dp"
+        android:layout_marginEnd="52dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textCodigo"
+        android:layout_width="117dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="120dp"
+        android:text="Codigo"
+        app:layout_constraintEnd_toStartOf="@+id/txtCodigo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnCancelar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="280dp"
+        android:text="Cancelar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/textPuntos"
+        android:layout_width="117dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="328dp"
+        android:text="Puntos"
+        app:layout_constraintEnd_toStartOf="@+id/txtCodigo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/spinnerPosicion"
+        android:layout_width="210dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="276dp"
+        android:entries="@array/posicion"
+        app:layout_constraintStart_toEndOf="@+id/textCodigo4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textNombre"
+        android:layout_width="117dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="176dp"
+        android:text="Nombre"
+        app:layout_constraintEnd_toStartOf="@+id/txtCodigo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtCodigo"
+        android:layout_width="220dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="56dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textCodigo4"
+        android:layout_width="117dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="276dp"
+        android:text="Posicion"
+        app:layout_constraintEnd_toStartOf="@+id/txtCodigo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAceptar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginBottom="280dp"
+        android:text="Aceptar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

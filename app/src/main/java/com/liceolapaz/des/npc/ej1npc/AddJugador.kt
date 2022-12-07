@@ -2,14 +2,12 @@ package com.liceolapaz.des.npc.ej1npc
 
 import android.content.ContentValues
 import android.database.sqlite.SQLiteDatabase
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.View
-import android.widget.AbsSpinner
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
+import androidx.appcompat.app.AppCompatActivity
 
 class AddJugador : AppCompatActivity() {
 

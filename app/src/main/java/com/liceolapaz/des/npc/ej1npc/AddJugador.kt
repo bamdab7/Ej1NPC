@@ -100,7 +100,6 @@ class AddJugador : AppCompatActivity() {
                 nuevoRegistro.put("posicion", pos)
                 nuevoRegistro.put("puntos", pun)
                 db.insert("Jugadores", null, nuevoRegistro)
-
                 //Una vez pulsado el boton, iremos a la ventana de todos los jugadores donde se listaran
                     // val intent = Intent(this@AddJugador,MainActivity2::class.java)
                     //  startActivity(intent)

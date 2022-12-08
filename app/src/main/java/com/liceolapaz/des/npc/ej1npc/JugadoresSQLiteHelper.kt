@@ -1,8 +1,10 @@
 package com.liceolapaz.des.npc.ej1npc
 
 import android.content.Context
+import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
 
 class JugadoresSQLiteHelper (
     context : Context?,
@@ -23,5 +25,29 @@ class JugadoresSQLiteHelper (
         db?.execSQL("DROP TABLE IF EXISTS Jugadores")
         //Se crea nueva version de la tabla
         db?.execSQL(sqlCreate)
+    }
+
+    //Consulta de lista todos los jugadores de nuestra bbdd
+    fun getAllJugadores() : ArrayList<JugadoresModel>{
+        val jugadoresList : ArrayList<JugadoresModel> = ArrayList()
+        val selectQuery = "SELECT * FROM Jugadores"
+        val db = this.writableDatabase
+
+        val cursor : Cursor = db.rawQuery(selectQuery,null)
+
+        if(cursor.moveToFirst()){
+            do{
+                val codigo = cursor.getInt(0)
+                val nombre = cursor.getString(1)
+                val precio = cursor.getDouble(2)
+                val posicion = cursor.getString(3)
+                val puntos = cursor.getInt(4)
+
+                val jugador = JugadoresModel(codigo, nombre, precio, posicion, puntos)
+                jugadoresList.add(jugador)
+                Log.e("Jugador","${jugador}")
+            }while (cursor.moveToNext())
+        }
+        return jugadoresList
     }
 }

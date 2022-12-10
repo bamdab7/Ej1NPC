@@ -23,15 +23,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        sqLiteHelper = JugadoresSQLiteHelper(this, "DBJugadores", null,1)
-
-        //Lanzamos la recycledView
-        initRecycledView()
-
+        //setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        sqLiteHelper = JugadoresSQLiteHelper(this, "DBJugadores", null,1)
+       // recyclerView = findViewById(R.id.recyclerJugadores)
+        //Lanzamos la recycledView
+        initRecycledView()
 
         getJugadores()
         //Se obtiene la referencia a los botones
@@ -52,9 +51,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initRecycledView(){
-      //  recyclerView = findViewById(R.id.recyclerJugadores)
         //Mejor manera de acceder a las vistas:
+       // binding.recyclerJugadores.layoutManager = LinearLayoutManager(this)
+       // binding.recyclerJugadores.adapter = JugadoresAdapter()
+//        recyclerView.layoutManager = LinearLayoutManager(this)
+        adapter = JugadoresAdapter()
+//        recyclerView.adapter = adapter
         binding.recyclerJugadores.layoutManager = LinearLayoutManager(this)
-        binding.recyclerJugadores.adapter = JugadoresAdapter()
+        binding.recyclerJugadores.adapter = adapter
     }
 }

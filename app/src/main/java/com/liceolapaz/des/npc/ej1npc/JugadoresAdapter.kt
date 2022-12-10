@@ -20,25 +20,28 @@ class JugadoresAdapter : RecyclerView.Adapter<JugadoresAdapter.JugadoresViewHold
 
     override fun onBindViewHolder(holder: JugadoresViewHolder, position: Int) {
       //  val jugador = jugadoresList[position]
-        holder.bindView(jugadoresList[position])
+        holder.render(jugadoresList[position])
     }
 
     override fun getItemCount(): Int {
         return jugadoresList.size
     }
 
-    class JugadoresViewHolder(var view : View) : RecyclerView.ViewHolder(view){
+    class JugadoresViewHolder(view : View) : RecyclerView.ViewHolder(view){
 
-        val binding = CardItemsJugadoresBinding.bind(view)
-
+        private val binding = CardItemsJugadoresBinding.bind(view)
         //Recogemos las variables del card items
 //        var nombre = view.findViewById<TextView>(R.id.tvNombre)
 //        var precio = view.findViewById<TextView>(R.id.tvPrecio)
 //        var posicion = view.findViewById<TextView>(R.id.tvPosicion)
 //        var puntos = view.findViewById<TextView>(R.id.tvPuntos)
 
-        fun bindView(jugador: JugadoresModel){
-            //Obtenemos los valores directamente 
+        fun render(jugador: JugadoresModel){
+            //Obtenemos los valores
+//            nombre.text = jugador.nombre
+//            precio.text = jugador.precio.toString()
+//            posicion.text = jugador.posicion
+//            puntos.text = jugador.puntos.toString()
             binding.tvNombre.text = jugador.nombre
             binding.tvPrecio.text = jugador.precio.toString()
             binding.tvPosicion.text = jugador.posicion

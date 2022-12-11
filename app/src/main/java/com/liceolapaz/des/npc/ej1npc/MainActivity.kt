@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.liceolapaz.des.npc.ej1npc.databinding.ActivityAddJugadorBinding
@@ -51,14 +52,14 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initRecycledView(){
+        val manager = LinearLayoutManager(this)
+        val decoration = DividerItemDecoration(this,manager.orientation)
         //Mejor manera de acceder a las vistas:
-       // binding.recyclerJugadores.layoutManager = LinearLayoutManager(this)
-       // binding.recyclerJugadores.adapter = JugadoresAdapter()
-//        recyclerView.layoutManager = LinearLayoutManager(this)
         adapter = JugadoresAdapter { jugadoresModel -> onItemSelected(jugadoresModel) } // el contenido de jugadores
-//        recyclerView.adapter = adapter
-        binding.recyclerJugadores.layoutManager = LinearLayoutManager(this)
+        binding.recyclerJugadores.layoutManager = manager
         binding.recyclerJugadores.adapter = adapter
+
+        binding.recyclerJugadores.addItemDecoration(decoration)
     }
     //La funcion debera recibir un jugador y me lleva a la de editar
     fun onItemSelected(jugadoresModel: JugadoresModel){

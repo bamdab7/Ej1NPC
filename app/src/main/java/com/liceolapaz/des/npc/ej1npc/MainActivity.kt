@@ -55,9 +55,14 @@ class MainActivity : AppCompatActivity() {
        // binding.recyclerJugadores.layoutManager = LinearLayoutManager(this)
        // binding.recyclerJugadores.adapter = JugadoresAdapter()
 //        recyclerView.layoutManager = LinearLayoutManager(this)
-        adapter = JugadoresAdapter()
+        adapter = JugadoresAdapter { jugadoresModel -> onItemSelected(jugadoresModel) } // el contenido de jugadores
 //        recyclerView.adapter = adapter
         binding.recyclerJugadores.layoutManager = LinearLayoutManager(this)
         binding.recyclerJugadores.adapter = adapter
+    }
+    //La funcion debera recibir un jugador y me lleva a la de editar
+    fun onItemSelected(jugadoresModel: JugadoresModel){
+        val intent = Intent(this@MainActivity,EditJugador::class.java)
+        startActivity(intent)
     }
 }

@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.liceolapaz.des.npc.ej1npc.databinding.CardItemsJugadoresBinding
 
-class JugadoresAdapter : RecyclerView.Adapter<JugadoresAdapter.JugadoresViewHolder>() {
+class JugadoresAdapter (private val onClickListener : (JugadoresModel) -> Unit): RecyclerView.Adapter<JugadoresAdapter.JugadoresViewHolder>() {
     private var jugadoresList : ArrayList<JugadoresModel> = ArrayList()
 
     fun addItems(items:ArrayList<JugadoresModel>){
@@ -20,7 +20,7 @@ class JugadoresAdapter : RecyclerView.Adapter<JugadoresAdapter.JugadoresViewHold
 
     override fun onBindViewHolder(holder: JugadoresViewHolder, position: Int) {
       //  val jugador = jugadoresList[position]
-        holder.render(jugadoresList[position])
+        holder.render(jugadoresList[position],onClickListener)
     }
 
     override fun getItemCount(): Int {
@@ -36,7 +36,7 @@ class JugadoresAdapter : RecyclerView.Adapter<JugadoresAdapter.JugadoresViewHold
 //        var posicion = view.findViewById<TextView>(R.id.tvPosicion)
 //        var puntos = view.findViewById<TextView>(R.id.tvPuntos)
 
-        fun render(jugador: JugadoresModel){
+        fun render(jugador: JugadoresModel,onClickListener : (JugadoresModel) -> Unit){
             //Obtenemos los valores
 //            nombre.text = jugador.nombre
 //            precio.text = jugador.precio.toString()
@@ -46,6 +46,10 @@ class JugadoresAdapter : RecyclerView.Adapter<JugadoresAdapter.JugadoresViewHold
             binding.tvPrecio.text = jugador.precio.toString()
             binding.tvPosicion.text = jugador.posicion
             binding.tvPuntos.text = jugador.puntos.toString()
+
+            itemView.setOnClickListener{
+                onClickListener(jugador)
+            }
         }
     }
 }

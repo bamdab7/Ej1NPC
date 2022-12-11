@@ -3,6 +3,7 @@ package com.liceolapaz.des.npc.ej1npc
 import android.app.AlertDialog
 import android.content.ContentValues
 import android.content.DialogInterface
+import android.content.Intent
 import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import android.view.View
@@ -101,9 +102,8 @@ class AddJugador : AppCompatActivity() {
                 nuevoRegistro.put("puntos", pun)
                 db.insert("Jugadores", null, nuevoRegistro)
                 //Una vez pulsado el boton, iremos a la ventana de todos los jugadores donde se listaran
-                    // val intent = Intent(this@AddJugador,MainActivity2::class.java)
-                    //  startActivity(intent)
-                onBackPressed()
+                val intent = Intent(this@AddJugador,MainActivity::class.java)
+                startActivity(intent)
             }
         })
         //Si elegimos NO -> volvera a la lista sin haber guardado los datos

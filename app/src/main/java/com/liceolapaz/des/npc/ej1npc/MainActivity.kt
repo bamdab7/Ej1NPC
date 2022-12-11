@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.Toast
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -64,6 +65,14 @@ class MainActivity : AppCompatActivity() {
     //La funcion debera recibir un jugador y me lleva a la de editar
     fun onItemSelected(jugadoresModel: JugadoresModel){
         val intent = Intent(this@MainActivity,EditJugador::class.java)
+
+       //Toast.makeText(this,jugadoresModel.nombre,Toast.LENGTH_LONG).show()
+        intent.putExtra("Codigo",jugadoresModel.codigo)
+        intent.putExtra("Nombre", jugadoresModel.nombre)
+        intent.putExtra("Precio",jugadoresModel.precio)
+        intent.putExtra("Posicion",jugadoresModel.posicion)
+        intent.putExtra("Puntos",jugadoresModel.puntos)
+
         startActivity(intent)
     }
 }
